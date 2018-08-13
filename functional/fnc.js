@@ -49,7 +49,8 @@ setTimeout(
 console.log(`Log printed`)
 
 
-
+let hi = 'android'
+hi = 10
 
 
 
