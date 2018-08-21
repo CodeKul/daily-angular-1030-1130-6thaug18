@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { JumboComponent } from './jumbo/jumbo.component';
+import { PricingModule } from './pricing/pricing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { JumboComponent } from './jumbo/jumbo.component';
   ],
   imports: [
     BrowserModule,
-    LoginModule
+    LoginModule,
+    PricingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
