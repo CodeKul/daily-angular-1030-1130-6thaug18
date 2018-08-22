@@ -1,0 +1,3 @@
+:host ::ng-deep h2 {
+    border: 1px solid red;
+}
