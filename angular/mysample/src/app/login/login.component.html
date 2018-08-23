@@ -4,23 +4,40 @@
   </h2><br/>
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <!-- Start form -->
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-      </div>
-      <div class="form-check">
-        <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Show password</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input 
+        type="email" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp" 
+        placeholder="Enter email"
+        #eml>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input 
+        type="password" 
+        class="form-control" 
+        name="password" 
+        id="password" 
+        placeholder="Password">
+    </div>
+    <div class="form-check" (mouseenter)="onEnter()">
+      <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Show password</button>
+      <button type="button" class="btn btn-primary" (click)="onLogin(eml.value)">Submit</button>
+    </div>
+    <div>
+      <p>{{pTxt}}</p>
+      <p>{{100*56}}</p>
+      <p>{{pTxt.toLowerCase()}}</p>
+    </div>
     <!-- End form -->
   </div>
 </div>
 <div class="row">
   <app-rmb-me></app-rmb-me>
+</div>
+<div class="row">
+  <ng-content></ng-content>
 </div>

@@ -8,8 +8,19 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  pTxt : string
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onLogin(txt : string) {
+    console.log( `Button clicked` )
+    this.pTxt = txt.toUpperCase()
+  }
+
+  onEnter() {
+    console.log( `Entered in div` )
   }
 }
