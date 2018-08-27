@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   pTxt: string = 'android'
   tp = 'text'
   tgl = false
+  brd = '1px solid '
 
   constructor() { }
 

@@ -2,8 +2,8 @@
 <app-info></app-info>
 <div class="container">
     <div class="card-deck mb-3 text-center">
-        <app-price-card></app-price-card>
-        <app-price-card></app-price-card>
-        <app-price-card></app-price-card>
+        <app-price-card [type]="'Free'" [cost]="'$60'" [info]="['Very good','1 GB Disk Space','Unlimited Read Access']" ></app-price-card>
+        <app-price-card [type]="'Gold'" [cost]="'$60'" [info]="['Very good','1 GB Disk Space','Unlimited Read Access']"></app-price-card>
+        <app-price-card [type]="'Platinum'" [cost]="'$60'" [info]="['Very good','1 GB Disk Space','Unlimited Read Access']" (onSignUp)="wellSignUp($event)"></app-price-card>
     </div>
 </div>
