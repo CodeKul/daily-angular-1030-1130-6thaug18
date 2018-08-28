@@ -13,7 +13,7 @@ export class PricingComponent implements OnInit {
   }
 
   wellSignUp(str : string) {
-
+    console.log(`SignUp CLicked`)
   }
 
 }

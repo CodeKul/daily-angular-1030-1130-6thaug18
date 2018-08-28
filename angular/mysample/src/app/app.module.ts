@@ -5,11 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { JumboComponent } from './jumbo/jumbo.component';
 import { PricingModule } from './pricing/pricing.module';
+import { AlertMyComponent } from './jumbo/alert-my/alert-my.component';
+import { BtnPnlComponent } from './jumbo/btn-pnl/btn-pnl.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JumboComponent
+    JumboComponent,
+    AlertMyComponent,
+    BtnPnlComponent
   ],
   imports: [
     BrowserModule,
