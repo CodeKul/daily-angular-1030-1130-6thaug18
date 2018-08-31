@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JumboComponent implements OnInit {
 
+  plHldr : string;
   constructor() { }
 
   ngOnInit() {

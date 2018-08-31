@@ -1,3 +1,10 @@
-<p>
-  jumbo works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <app-alert-my [alCls]="plHldr"></app-alert-my>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <app-btn-pnl (onAlert)="plHldr = $event"></app-btn-pnl>
+  </div>
+</div>
