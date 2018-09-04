@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mysample';
+  tm = 123
+
+  tmsDt() {
+    this.tm = new Date().getTime()
+  }
 }

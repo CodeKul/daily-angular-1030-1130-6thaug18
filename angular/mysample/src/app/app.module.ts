@@ -7,13 +7,19 @@ import { JumboComponent } from './jumbo/jumbo.component';
 import { PricingModule } from './pricing/pricing.module';
 import { AlertMyComponent } from './jumbo/alert-my/alert-my.component';
 import { BtnPnlComponent } from './jumbo/btn-pnl/btn-pnl.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { MagicDirective } from './directives/magic.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     JumboComponent,
     AlertMyComponent,
-    BtnPnlComponent
+    BtnPnlComponent,
+    LifecycleComponent,
+    DirectivesComponent,
+    MagicDirective
   ],
   imports: [
     BrowserModule,
