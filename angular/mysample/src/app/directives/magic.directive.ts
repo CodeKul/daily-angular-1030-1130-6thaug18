@@ -1,10 +1,11 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appMagic]'
 })
 export class MagicDirective {
 
+  @Input('appMagic')
   @HostBinding('style.background')
   hstClr: string
 
