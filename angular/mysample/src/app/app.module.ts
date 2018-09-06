@@ -10,6 +10,7 @@ import { BtnPnlComponent } from './jumbo/btn-pnl/btn-pnl.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { MagicDirective } from './directives/magic.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MagicDirective } from './directives/magic.directive';
     BtnPnlComponent,
     LifecycleComponent,
     DirectivesComponent,
-    MagicDirective
+    MagicDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
