@@ -1,3 +1,4 @@
+import { SocialServiceService } from './social-service.service';
 import { LoginModule } from './login/login.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,10 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { MagicDirective } from './directives/magic.directive';
 import { UnlessDirective } from './directives/unless.directive';
+import { ServiceComponent } from './service/service.component';
+import { LoggerService } from './logger.service';
+import { ProgressComponent } from './progress/progress.component';
+import { BtnPanelComponent } from './btn-panel/btn-panel.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +26,17 @@ import { UnlessDirective } from './directives/unless.directive';
     LifecycleComponent,
     DirectivesComponent,
     MagicDirective,
-    UnlessDirective
+    UnlessDirective,
+    ServiceComponent,
+    ProgressComponent,
+    BtnPanelComponent
   ],
   imports: [
     BrowserModule,
     LoginModule,
     PricingModule
   ],
-  providers: [],
+  // providers: [SocialServiceService, LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
