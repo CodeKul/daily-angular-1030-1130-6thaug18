@@ -1,3 +1,4 @@
+import { AgeCalcComponent } from './main-content/age-calc.component';
 import { AmericaComponent } from './main-content/america.component';
 import { FlagComponent } from './main-content/flag.component';
 import { RememberMeComponent } from './login/remember-me/remember-me.component';
@@ -8,12 +9,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { IndiaComponent } from './main-content/india.component';
 
 const dashRoutes = [
+  { path: 'flg', component: FlagComponent },
   { path: 'india', component: IndiaComponent },
-  { path: 'america', component: AmericaComponent }
+  { path: 'america', component: AmericaComponent },
+  { path: 'ag', component: AgeCalcComponent }
 ]
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'dash', component: WrapperComponent, children : dashRoutes },
+  { path: 'dash', component: WrapperComponent, children: dashRoutes },
   { path: 'rm/:nm', component: RememberMeComponent },
   { path: '**', redirectTo: '' }
 ];
