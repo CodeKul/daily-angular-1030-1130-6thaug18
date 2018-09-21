@@ -7,6 +7,7 @@ import { WrapperComponent } from './wrapper/wrapper.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IndiaComponent } from './main-content/india.component';
+import { DashGuard } from './dash.guard';
 
 const dashRoutes = [
   { path: 'flg', component: FlagComponent },
@@ -16,7 +17,7 @@ const dashRoutes = [
 ]
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'dash', component: WrapperComponent, children: dashRoutes },
+  { path: 'dash', component: WrapperComponent, children: dashRoutes, canActivate: [DashGuard] },
   { path: 'rm/:nm', component: RememberMeComponent },
   { path: '**', redirectTo: '' }
 ];
