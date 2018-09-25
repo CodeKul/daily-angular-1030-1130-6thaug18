@@ -8,6 +8,11 @@ import { NgForm } from '@angular/forms';
 })
 export class TemplateDrivenComponent implements OnInit {
 
+  frmDt = {
+    nm : 'xyz pqr',
+    eml : 'xyz@gmail.com',
+    mb :'9762548833'
+  }
   constructor() { }
 
   ngOnInit() {
@@ -16,5 +21,7 @@ export class TemplateDrivenComponent implements OnInit {
   frmSub(frm : NgForm) {
     console.log(`Form Submitted`)
     console.log(frm)
+    console.log(frm.value)
+    console.log(this.frmDt)
   }
 }
