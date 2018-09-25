@@ -5,20 +5,21 @@
     <div class="row">
         <div class="col-md-3">
             <div class="form-group form-group-sm">
-                <label for="firstname" class="control-label">Name</label>
-                <input type="text" name="nm" class="form-control" placeholder="Name" [(ngModel)]="frmDt.nm">
+                <label *ngIf="!frm.controls.nm?.valid" for="firstname" class="control-label">Enter the proper name</label>
+                <input type="text" name="nm" class="form-control" placeholder="Name" [(ngModel)]="frmDt.nm" required="true">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
-                <label for="lastname" class="control-label">Email</label>
-                <input type="text" name ="eml" class="form-control" placeholder="Email" [(ngModel)]="frmDt.eml">
+                <label for="lastname" *ngIf="!frm.controls.eml?.valid" class="control-label">Enter Email</label>
+                <label for="lastname" *ngIf="!frm.controls.eml?.valid"class="control-label">Enter Valid Email</label>
+                <input type="text" name ="eml" class="form-control" placeholder="Email" [(ngModel)]="frmDt.eml" required="true" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label for="lastname" class="control-label">Mobile</label>
-                <input type="text" name="mbl" class="form-control" placeholder="Mobile" [(ngModel)]="frmDt.mb">
+                <input type="text" name="mbl" class="form-control" placeholder="Mobile" [(ngModel)]="frmDt.mb" required="true">
             </div>
         </div>
     </div>
