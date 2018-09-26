@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-data-driven',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataDrivenComponent implements OnInit {
 
-  constructor() { }
+  fg: FormGroup
+
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit() {
+    this.fg = this.fb.group({
+      nm: this.fb.control('', Validators.required),
+      eml: this.fb.control('', Validators.compose([Validators.required, Validators.email])),
+      mbl: this.fb.control('', Validators.required)
+    })
   }
 
+  frmSub() {
+    console.log(this.fg)
+    console.log(this.fg.value)
+  }
 }

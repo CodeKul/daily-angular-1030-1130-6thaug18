@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './../app-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +11,8 @@ import { DataDrivenComponent } from './data-driven.component';
     CommonModule,
     AppRoutingModule,
 
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [FormsComponent, TemplateDrivenComponent, DataDrivenComponent],
   exports: [FormsComponent, TemplateDrivenComponent, DataDrivenComponent]
