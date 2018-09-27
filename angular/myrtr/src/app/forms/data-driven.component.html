@@ -5,27 +5,31 @@
     <div class="row">
         <div class="col-md-3">
             <div class="form-group form-group-sm">
-                <label for="firstname" class="control-label">Name</label>
-                <input type="text" class="form-control"  placeholder="Name" formControlName="nm">
+                <div *ngIf="!fg.controls.nm.pristine">
+                    <label for="firstname" class="control-label" *ngIf="!fg.controls.nm.valid">Enter Proper Name</label>
+                </div>
+                <input type="text" class="form-control" placeholder="Name" formControlName="nm">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
-                <label for="lastname" class="control-label">Email</label>
-                <input type="text" class="form-control"  placeholder="Email" formControlName="eml">
+                <label for="lastname" class="control-label" *ngIf="!fg.controls.eml.valid">Enter Email</label>
+                <label for="lastname" class="control-label" *ngIf="!fg.controls.eml.valid">Enter Valid Email</label>
+                <input type="text" class="form-control" placeholder="Email" formControlName="eml">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
-                <label for="lastname" class="control-label">Mobile</label>
+                <label for="lastname" class="control-label" *ngIf="!fg.controls.mbl.valid && !fg.controls.mbl.errors?.length">Enter mobile</label>
+                <label for="lastname" class="control-label" *ngIf="fg.controls.mbl.errors?.length">mobile length greater than 10</label>
                 <input type="text" class="form-control" placeholder="Mobile" formControlName="mbl">
             </div>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-3">
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default" [disabled]="!fg.valid">Submit</button>
         </div>
     </div>
 </form>
