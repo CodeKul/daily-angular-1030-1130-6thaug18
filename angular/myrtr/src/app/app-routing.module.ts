@@ -11,6 +11,7 @@ import { IndiaComponent } from './main-content/india.component';
 import { DashGuard } from './dash.guard';
 import { TemplateDrivenComponent } from './forms/template-driven.component';
 import { DataDrivenComponent } from './forms/data-driven.component';
+import { HttpComponent } from './http/http.component';
 
 const dashRoutes = [
   { path: 'flg', component: FlagComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'dash', component: WrapperComponent, children: dashRoutes, canActivate: [DashGuard] },
   { path: 'rm/:nm', component: RememberMeComponent },
   { path: 'forms', component: FormsComponent, children: formsChildren },
+  { path: 'http', component: HttpComponent },
   { path: '**', redirectTo: '' }
 ];
 

@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" #city>
+    <input type="button" class="btn btn-primary" value="Go" (click)="fetchWeather(city.value)">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p>Latitude - {{res?.coord?.lat}}</p>
+    <p>Longitude - {{res?.coord?.lon}}</p>
+    <p>{{res | json}}</p>
+  </div>
+</div>
