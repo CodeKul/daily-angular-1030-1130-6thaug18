@@ -1,6 +1,7 @@
 import { Observable } from 'rxjs';
 import { HttpService } from './http.service';
 import { Component, OnInit } from '@angular/core';
+import { UserCreds } from './user';
 
 @Component({
   selector: 'app-http',
@@ -9,10 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit {
 
-  res : Res
+  res: Res
+  creds: UserCreds
+  nm: string = 'android'
+  dt = new Date()
+  ch = 'o'
+  nwMb = ''
+
+  mobs = [
+    'android',
+    'xylo',
+    'oppo',
+    'black Berry',
+    'apple',
+    'htc'
+  ]
   constructor(
     private http: HttpService
-  ) { }
+  ) {
+    this.creds = {} as UserCreds
+  }
 
   ngOnInit() {
     this.myDtObs().subscribe(
@@ -29,7 +46,7 @@ export class HttpComponent implements OnInit {
       },
       err => console.log(err),
       () => console.log('completed')
-     )
+    )
   }
 
   myDtObs(): Observable<number> {
@@ -42,5 +59,16 @@ export class HttpComponent implements OnInit {
       }
       sub.complete()
     })
+  }
+
+  login() {
+    this.http.login(this.creds).subscribe(
+      res => console.log(res)
+    ),
+      err => console.log(err)
+  }
+
+  onAdd() {
+    this.mobs.push(this.nwMb)
   }
 }

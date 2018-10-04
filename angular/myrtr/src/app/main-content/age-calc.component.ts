@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-
+// ng build --env=prod --base-href "https://github.com/CodeKul/daily-angular-1030-1130-6thaug18/angular/myrtr"
 @Component({
   selector: 'app-age-calc',
   templateUrl: './age-calc.component.html',
@@ -7,6 +7,7 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 })
 export class AgeCalcComponent implements OnInit {
 
+  yr = ''
   curYrDt = new Date().getTime()
   yrDt = new Date("1989-06-15T00:00:00+05:30").getTime()
   ag: number

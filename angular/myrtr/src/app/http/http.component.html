@@ -9,5 +9,38 @@
     <p>Latitude - {{res?.coord?.lat}}</p>
     <p>Longitude - {{res?.coord?.lon}}</p>
     <p>{{res | json}}</p>
+    <p>{{nm | uppercase}}</p>
+    <p>{{dt | date:"dd-MM-yyyy"}}</p>
+    <p>{{nm |fstUp:2}}</p> 
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="creds.usNm">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="creds.pass">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" class="btn btn-primary" value="Login" (click)="login()">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="ch" placeholder="Search">
+    <input type="text" [(ngModel)]="nwMb" placeholder="New Mobile">
+    <input type="button" value="Add" (click)="onAdd()">
+  </div>
+  <div class="col-md-6">
+    <ol>
+      <li *ngFor="let mb of (mobs | sorting:ch)">{{mb}}</li>
+    </ol>
   </div>
 </div>
